@@ -12,13 +12,11 @@ if ($handle = opendir($directory.'/')) {
 		if ($file!='.'&& $file!='..'){
 			//echo ''.$file.'<br>';
 			array_push($list, $file);
-			
 		}
 	}
 	//print_r($list);
 	//echo '<br>';
 }
-	
 ?>
 
 <html>
@@ -34,12 +32,15 @@ if ($handle = opendir($directory.'/')) {
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 		<link href = "css/bootstrap.css" rel = "stylesheet">
 		<link href = "css/styles.css" rel = "stylesheet">
-		
-
 	
 	</head>
 	<body>
 		<div id="main">
+		
+			<div class="row showcase m-b-10">
+				<div class="col-md-12 showcaseBanner pic-mobile"><img id="ShowcaseBanner" src=""></div>
+			</div>
+		
 		
 			<!-- option menu for months -->
 			<select id="month" onchange="CreateDays()">
@@ -56,10 +57,10 @@ if ($handle = opendir($directory.'/')) {
 			<a class="btn btn-primary" id ="download" href="" style="visibility: hidden" download >Download</a>
 				
 		</div>
-		
-
+	
 	</body>
 	<footer>
+	
 		<!--get array from php-->
 		<script>var list = <?php echo json_encode($list) ?>;</script>
 		

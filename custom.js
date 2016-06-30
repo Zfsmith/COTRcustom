@@ -1,8 +1,6 @@
-//$(document).ready(function(){
-	
-			//get array from php
-			
-			
+
+	/* !!!!!!!!!!!!!!!!!! JavaScript for the daily devotional download dropdown box !!!!!!!!!!!!!!!!!! */
+
 			//create arrays for each month to store days
 			var January = new Array();
 			var Febuary = new Array();
@@ -16,8 +14,6 @@
 			var October = new Array();
 			var November = new Array();
 			var December = new Array();
-			
-			document.write("<br>");
 			
 			//fill month arrays with days
 			for (i = 0; i < list.length; i++){
@@ -187,23 +183,17 @@
 				cMonth.appendChild(optM);
 			}
 			
-			
 			//create days in option menu
 			function CreateDays(){
 				document.getElementById("download").style.visibility = "hidden";
-				
 				select = document.getElementById("day");
 				document.getElementById("day").options.length = 0;
-				
 				var opt = document.createElement('option');
 				opt.value = "0";
 				opt.innerHTML = "Select Day";
 				select.appendChild(opt);
 				
-				
-				
 				switch (document.getElementById("month").value){
-					
 					
 					case "January":
 						for ( j = 0; j < January.length; j++){
@@ -212,7 +202,6 @@
 							opt.innerHTML = January[j];
 							select.appendChild(opt);
 						}
-						
 						break;
 						
 					case "Febuary":
@@ -315,7 +304,7 @@
 						break;	
 				}
 			}
-			
+	
 			//unhide and change href of download link
 			function CreateDownload(){
 				var selD = document.getElementById("day");
@@ -324,25 +313,20 @@
 				down = document.getElementById("download");
 				down.href = (file);
 				down.style.visibility = "visible";
-				//down.href = (file);
-				//var a = document.createElement('a');
-				//var linkText = document.createTextNode("Download");
-				//a.appendChild(linkText);
-				//a.title = "Download";
-				
-				
-				//a.href = (file);
-				//down.appendChild(a);
-				//document.body.appendChild(a);
-				
 			}
 			
-			//function GetFile(){
-				//var selD = document.getElementById("day");
-				//var selM = document.getElementById("month");
-				//var file = ("\"Files\\" + selM.value +"-"+selD.value+ ".txt\"");
-				//document.write(file);
-				//window.location =(file);
-				
-			//}
-			//});
+	/* !!!!!!!!!!!!!!!!!! JavaScript for showcase banner !!!!!!!!!!!!!!!!!!*/		
+	
+			var d = new Date();
+			var n = d.getDay();
+			img = document.getElementById("ShowcaseBanner");
+			
+			if (n < 4 && n > 0){
+				img.src = "images/Wednesday.jpg";
+			}
+			else{
+				img.src = "images/Sunday.jpg";
+			}
+			
+	
+	
