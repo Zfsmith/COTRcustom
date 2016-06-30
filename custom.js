@@ -1,6 +1,5 @@
 //$(document).ready(function(){
 	
-			document.write("butts");
 			//get array from php
 			
 			
